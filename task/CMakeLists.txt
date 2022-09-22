@@ -1,1 +1,1 @@
-add_executable(task task.cpp dummy.cpp)
+add_executable(task task.cpp)

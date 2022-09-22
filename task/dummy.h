@@ -1,6 +1,28 @@
-class some_class {
+#pragma once
+
+namespace backpack {
+
+    class Backpack {
     public:
-        void bad_class_method(int BAD_PARAM);
+        Backpack() = delete;
+
+        Backpack(int cap) : cap_(cap) {}
+
+        void put(int cnt = 1) {
+            cap_ += cnt;
+        }
+
+        int getOne() {
+            return --cap_;
+        }
+
+        auto capacity() const {
+            return cap_;
+        }
+
     private:
-        int bad_private_class_member;
-};
+        int cap_;
+        int AbacabaBraces;
+    };
+
+}  // namespace backpack
